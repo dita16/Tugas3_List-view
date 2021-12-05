@@ -7,8 +7,8 @@ import java.util.List;
 
 import simple.example.hewanpedia.model.Anjing;
 import simple.example.hewanpedia.model.Hewan;
+import simple.example.hewanpedia.model.Ikan;
 import simple.example.hewanpedia.model.Kucing;
-import simple.example.hewanpedia.model.Ular;
 
 public class DataProvider {
     private static List<Hewan> hewans = new ArrayList<>();
@@ -41,24 +41,24 @@ public class DataProvider {
         return anjings;
     }
 
-    private static List<Ular> intDataUlar(Context ctx) {
-        List<Ular> ulars = new ArrayList<>();
-        ulars.add(new Ular("Erpeton", "Asia Tenggara",
-                "Ular kecil ini hidup di air keruh.mereka kebanyakan makan ikan.", R.drawable.ular_erpeton));
-        ulars.add(new Ular("Viper", "Afrika Tengah",
-                "Ular ini biasa memakan hewan darat seperti mamalia dan katak.ia juga sering disebut ular berbungan.", R.drawable.ular_hairybush));
-        ulars.add(new Ular("Malagasi", "Madagaskar",
-                "Ular ini memiliki moncong panjang yang menyerupai daun datar.", R.drawable.ular_langaha));
-        ulars.add(new Ular("Viper" ,"Tanzania",
-                "Ular ini memiliki tanduk yang terlihat keren tepat di atas mata besarnya.habitat alami mereka terancam punah akibat penebangan pohon liar.", R.drawable.ular_matilda));
+    private static List<Ikan> intDataIkan(Context ctx) {
+        List<Ikan> ikans = new ArrayList<>();
+        ikans.add(new Ikan("ikan", "jawa",
+                "Ikan kecil ini hidup di air keruh.mereka kebanyakan makan ikan.", R.drawable.ikan_nila));
+        ikans.add(new Ikan("ikan", "surabaya",
+                "Ikan ini biasa memakan hewan darat seperti mamalia dan katak.ia juga sering disebut ular berbungan.", R.drawable.ikan_gurame));
+        ikans.add(new Ikan("ikan", "maluku",
+                "Ikan ini memiliki moncong panjang yang menyerupai daun datar.", R.drawable.ikan_lele));
+        ikans.add(new Ikan("ikan" ,"papua",
+                "Ikan ini memiliki tanduk yang terlihat keren tepat di atas mata besarnya.habitat alami mereka terancam punah akibat penebangan pohon liar.", R.drawable.ikan_mas));
         
-        return ulars;
+        return ikans;
     }
 
     private static void initAllHewans(Context ctx) {
         hewans.addAll(initDataKucing(ctx));
         hewans.addAll(initDataAnjing(ctx));
-        hewans.addAll(intDataUlar(ctx));
+        hewans.addAll(intDataIkan(ctx));
     }
 
     public static List<Hewan> getAllHewan(Context ctx) {
