@@ -7,7 +7,7 @@ import java.util.List;
 
 import simple.example.hewanpedia.model.Anjing;
 import simple.example.hewanpedia.model.Hewan;
-import simple.example.hewanpedia.model.Ikan;
+import simple.example.hewanpedia.model.Elang;
 import simple.example.hewanpedia.model.Kucing;
 
 public class DataProvider {
@@ -41,24 +41,24 @@ public class DataProvider {
         return anjings;
     }
 
-    private static List<Ikan> intDataIkan(Context ctx) {
-        List<Ikan> ikans = new ArrayList<>();
-        ikans.add(new Ikan("ikan", "jawa",
-                "Ikan kecil ini hidup di air keruh.mereka kebanyakan makan ikan.", R.drawable.ikan_nila));
-        ikans.add(new Ikan("ikan", "surabaya",
-                "Ikan ini biasa memakan hewan darat seperti mamalia dan katak.ia juga sering disebut ular berbungan.", R.drawable.ikan_gurame));
-        ikans.add(new Ikan("ikan", "maluku",
-                "Ikan ini memiliki moncong panjang yang menyerupai daun datar.", R.drawable.ikan_lele));
-        ikans.add(new Ikan("ikan" ,"papua",
-                "Ikan ini memiliki tanduk yang terlihat keren tepat di atas mata besarnya.habitat alami mereka terancam punah akibat penebangan pohon liar.", R.drawable.ikan_mas));
+    private static List<Elang> intDataElang(Context ctx) {
+        List<Elang> elangs = new ArrayList<>();
+        elangs.add(new Elang("Elang bido", "jawa",
+                "Elang bido sering mencari makan saat malam hari dan elang ini suka memakan ular,tikus dan tupai.", R.drawable.elangbido));
+        elangs.add(new Elang("Elang gunung", "jawa",
+                "Elang gunung ini sering di jumpai di dataran tinggi dan dia suka memakan hewan kecil.", R.drawable.elanggunung));
+        elangs.add(new Elang("Elang hitam", "papua",
+                "Elang hitam sering di jumpai di pedalaman hutan papua dan elang ini suka memakan rubah kecil.", R.drawable.elanghitam));
+        elangs.add(new Elang("Elang jawa" ,"sulawesi",
+                "Elang jawa biasanya elang ini sering mencari mangsa saat pagi dan elang ini suka merentangkan sayapnya saat matahari terbit.", R.drawable.elangjawa));
         
-        return ikans;
+        return elangs;
     }
 
     private static void initAllHewans(Context ctx) {
         hewans.addAll(initDataKucing(ctx));
         hewans.addAll(initDataAnjing(ctx));
-        hewans.addAll(intDataIkan(ctx));
+        hewans.addAll(intDataElang(ctx));
     }
 
     public static List<Hewan> getAllHewan(Context ctx) {
